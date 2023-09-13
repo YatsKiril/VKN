@@ -1,0 +1,21 @@
+import math
+
+x1 = 88
+x2 = 18 / 7
+x1_1 = 9.38
+x2_2 = 2.57
+
+rel_error_x1 = abs(math.sqrt(x1) - x1_1) / abs(math.sqrt(x1))
+rel_error_x2 = abs(x2 - x2_2) / abs(x2)
+
+print(rel_error_x1)
+print(rel_error_x2)
+
+if rel_error_x1 < rel_error_x2:
+  print("Перша рівність точніша з відносною похибкою", rel_error_x1)
+
+elif rel_error_x1 > rel_error_x2:
+  print("Друга рівність точніша з відносною похибкою", rel_error_x2)
+
+else:
+  print("Обидві рівності мають однакову точність з віденосною похибкою", rel_error_x1)
